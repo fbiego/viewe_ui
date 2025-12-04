@@ -1,16 +1,80 @@
 <screen>
-	<view>
-		<lv_switch x="24" y="12" />
-		<lv_checkbox text="Checkbox" x="29" y="58" />
+	<view style_bg_color="0x0c0c0c">
+		<!-- Top Area inclusive of the room and time  -->
+		<lv_label text="Living Room" x="10" y="10" style_text_color="0xffffff" />
+		<lv_label text="12:45" x="-10" y="10" align="top_right" style_text_color="0xffffff" />
 
-		<lv_slider width="200" x="15" y="93" height="10" bind_value="subject_slider" />
-		<lv_label bind_text="subject_slider" bind_text-fmt="Slider value: %d" x="20" y="116" />
+		<!-- Main Light Section -->
 
-		<lv_arc x="46" y="151" bind_value="subject_arc" />
-		<lv_label bind_text="subject_arc" bind_text-fmt="Arc value:&#10; %d" x="77" y="196" style_text_align="center" />
+		<lv_bar
+			width="230"
+			align="top_mid"
+			y="40"
+			height="50"
+			style_bg_color="0x1a1a19"
+			style_bg_opa="255"
+			style_radius="10"
+		>
+			<lv_label align="left_mid" x="10" style_text_color="0xffffff" text="Main Lights" />
 
-		<lv_button x="75" y="279">
-			<lv_label text="Button" />
+			<lv_switch
+				width="50"
+				height="25"
+				align="right_mid"
+				x="-10"
+				style_bg_color="0x209206"
+				style_bg_opa="255"
+				style_radius="20"
+			/>
+		</lv_bar>
+
+		<!-- Brigtness Level -->
+
+		<lv_bar
+			width="230"
+			height="90"
+			align="center"
+			y="-12"
+			style_bg_color="0x10100e"
+			style_bg_opa="255"
+			style_radius="10"
+		>
+			<lv_label text="Brightness" align="top_left" x="10" y="20" style_text_color="0xffffff" />
+
+			<lv_slider align="bottom_mid" width="200" height="7" y="-20" bind_value="subject_slider" />
+		</lv_bar>
+
+		<!-- Fans -->
+
+		<lv_bar
+			width="230"
+			align="center"
+			y="70"
+			height="50"
+			style_bg_color="0x1a1a19"
+			style_bg_opa="255"
+			style_radius="10"
+		>
+			<lv_label align="left_mid" x="10" style_text_color="0xffffff" text="Fan" />
+
+			<lv_switch
+				width="50"
+				height="25"
+				align="right_mid"
+				x="-10"
+				style_bg_color="0x209206"
+				style_bg_opa="255"
+				style_radius="20"
+				bind_checked="subject_slider"
+			/>
+		</lv_bar>
+
+		<!-- Room Status "Locked / Open"-->
+
+		<lv_label text="Room Status :" style_text_color="0xffffff" align="bottom_mid" y="-45" />
+
+		<lv_button align="bottom_mid" y="-7" style_bg_color="0xff0000">
+			<lv_label text="LOCKED" />
 		</lv_button>
 	</view>
 </screen>
