@@ -15,10 +15,13 @@
 		<!-- Add <int>, <string>, or <float> subjects here -->
 		<int name="subject_arc" value="50" />
 		<int name="subject_slider" value="50" />
+
+		<int name="subject_radio" value="0" />
 	</subjects>
 
 	<images>
 		<!-- Add <file> or <data> tags here -->
+		<data name="lvgl_pro" src_path="images/lvgl_pro_240.png" color_format="rgb565" />
 	</images>
 
 	<fonts>

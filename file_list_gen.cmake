@@ -1,6 +1,9 @@
 list(
   APPEND
   PROJECT_SOURCES
+  ${CMAKE_CURRENT_LIST_DIR}/components/radio_item/radio_item_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/main_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/sample_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/viewe_ui_gen.c
-  ${CMAKE_CURRENT_LIST_DIR}/viewe_ui.c)
+  ${CMAKE_CURRENT_LIST_DIR}/viewe_ui.c
+  ${CMAKE_CURRENT_LIST_DIR}/images/lvgl_pro_data.c)

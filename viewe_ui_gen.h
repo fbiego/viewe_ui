@@ -51,12 +51,15 @@ extern "C" {
  * Images
  *----------------*/
 
+extern const void * lvgl_pro;
+
 /*----------------
  * Subjects
  *----------------*/
 
 extern lv_subject_t subject_arc;
 extern lv_subject_t subject_slider;
+extern lv_subject_t subject_radio;
 
 /**********************
  * GLOBAL PROTOTYPES
@@ -65,6 +68,10 @@ extern lv_subject_t subject_slider;
 /*----------------
  * Event Callbacks
  *----------------*/
+
+void slider_change_cb(lv_event_t * e);
+void arc_change_cb(lv_event_t * e);
+void button_click_cb(lv_event_t * e);
 
 /**
  * Initialize the component library
@@ -81,6 +88,8 @@ void viewe_ui_init_gen(const char * asset_path);
  **********************/
 
 /*Include all the widget and components of this library*/
+#include "components/radio_item/radio_item_gen.h"
+#include "screens/main_gen.h"
 #include "screens/sample_gen.h"
 
 #ifdef __cplusplus

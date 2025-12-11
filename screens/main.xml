@@ -1,0 +1,20 @@
+<screen>
+	<view scrollable="false">
+		<lv_image src="lvgl_pro" />
+
+		<lv_slider width="200" y="3" height="10" bind_value="subject_slider" max_value="255" align="center">
+			<event_cb callback="slider_change_cb" trigger="value_changed" />
+		</lv_slider>
+		<lv_label bind_text="subject_slider" bind_text-fmt="%d" y="-20" align="center" />
+
+		<lv_arc bind_value="subject_arc" align="bottom_mid" max_value="255">
+			<event_cb callback="arc_change_cb" trigger="value_changed" />
+		</lv_arc>
+		<lv_label bind_text="subject_arc" bind_text-fmt="%d" y="-80" style_text_align="center" align="bottom_mid" />
+
+		<lv_button align="bottom_mid" y="-40">
+			<lv_label text="Button" />
+			<event_cb callback="button_click_cb" trigger="clicked" />
+		</lv_button>
+	</view>
+</screen>

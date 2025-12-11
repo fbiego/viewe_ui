@@ -1,4 +1,15 @@
 <screen>
+	<styles>
+		<style
+			name="style_radio"
+			width="content"
+			height="content"
+			layout="flex"
+			flex_flow="column"
+			radius="0"
+			border_width="0"
+		/>
+	</styles>
 	<view>
 		<lv_switch x="24" y="12" />
 		<lv_checkbox text="Checkbox" x="29" y="58" />
@@ -12,5 +23,25 @@
 		<lv_button x="75" y="279">
 			<lv_label text="Button" />
 		</lv_button>
+
+		<lv_obj>
+			<style name="style_radio" />
+			<radio_item text="A">
+				<bind_state_if_eq subject="subject_radio" state="checked" ref_value="0" />
+				<subject_set_int_event subject="subject_radio" trigger="clicked" value="0" />
+			</radio_item>
+			<radio_item text="B">
+				<bind_state_if_eq subject="subject_radio" state="checked" ref_value="1" />
+				<subject_set_int_event subject="subject_radio" trigger="clicked" value="1" />
+			</radio_item>
+			<radio_item text="C">
+				<bind_state_if_eq subject="subject_radio" state="checked" ref_value="2" />
+				<subject_set_int_event subject="subject_radio" trigger="clicked" value="2" />
+			</radio_item>
+			<radio_item text="D">
+				<bind_state_if_eq subject="subject_radio" state="checked" ref_value="3" />
+				<subject_set_int_event subject="subject_radio" trigger="clicked" value="3" />
+			</radio_item>
+		</lv_obj>
 	</view>
 </screen>
